@@ -41,6 +41,9 @@ public class Suscriptor {
             client.connect(connectOptions);
             client.subscribe("/itt363-grupo3/estacion-1/sensores/#"); // Recuperando la información desde la jerarquia superior.
             client.subscribe("/itt363-grupo3/estacion-2/sensores/#");
+            client.subscribe("/itt363-grupo3/estacion-3/sensores/#");
+            client.subscribe("/itt363-grupo3/estacion-4/sensores/#");
+
         }
         catch (MqttException e) {
             e.printStackTrace();

@@ -6,10 +6,12 @@ public class Sensor {
 
     private String sensorId;
     private int temperatura;
+    private String sensorType;
     private Date fecha = new Date();
 
-    public Sensor(String id){
+    public Sensor(String id, String sensorType) {
         setSensorId(id);
+        setSensorType(sensorType);
         int numero = (int) (Math.random() * 100) + 1;
         setTemperatura(numero);
     }
@@ -36,5 +38,13 @@ public class Sensor {
 
     public void setSensorId(String sensorId) {
         this.sensorId = sensorId;
+    }
+
+    public String getSensorType() {
+        return sensorType;
+    }
+
+    public void setSensorType(String sensorType) {
+        this.sensorType = sensorType;
     }
 }
